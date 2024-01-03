@@ -49,18 +49,18 @@ int main() {
 
             //keyboard inputs
             if(e.type == SDL_KEYDOWN) {
-                if(e.key.keysym.sym == SDLK_UP && canMoveFurtherUp(&playerLeft))
-                    playerLeft.y -= playerStep;
-                    isPlayerLeftMovingUp = true;
-                if(e.key.keysym.sym == SDLK_DOWN && canMoveFurtherDown(&playerLeft, windowHeight))
-                    playerLeft.y += playerStep;
-                    isPlayerRightMovingDown = true;
-                if(e.key.keysym.sym == SDLK_w && canMoveFurtherUp(&playerRight))
+                if(e.key.keysym.sym == SDLK_UP && canMoveFurtherUp(&playerRight))
                     playerRight.y -= playerStep;
                     isPlayerRightMovingUp = true;
-                if(e.key.keysym.sym == SDLK_s && canMoveFurtherDown(&playerRight, windowHeight))
+                if(e.key.keysym.sym == SDLK_DOWN && canMoveFurtherDown(&playerRight, windowHeight))
                     playerRight.y += playerStep;
                     isPlayerRightMovingDown = true;
+                if(e.key.keysym.sym == SDLK_w && canMoveFurtherUp(&playerLeft))
+                    playerLeft.y -= playerStep;
+                    isPlayerLeftMovingUp = true;
+                if(e.key.keysym.sym == SDLK_s && canMoveFurtherDown(&playerLeft, windowHeight))
+                    playerLeft.y += playerStep;
+                    isPlayerLeftMovingDown = true;
             } 
             if (e.type == SDL_KEYUP) {
                     isPlayerLeftMovingUp = false;
