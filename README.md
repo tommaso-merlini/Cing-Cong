@@ -5,4 +5,4 @@
   gcc -W -Wall -Wextra -pedantic -o cing-cong cing-cong.c -Iinclude -lpthread -Llib -lSDL2 -lSDL2main
    ```
 ## Movements
-playerRight moves with keyUp and keyDown, and playerRight moves with w and s
+playerRight moves with keyUp and keyDown, and playerLeft moves with w and s
